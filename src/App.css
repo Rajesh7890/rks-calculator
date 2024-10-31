@@ -1,38 +1,160 @@
 .App {
-  text-align: center;
+  font-family: Arial,sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .App-header {
+  font-family: Arial,sans-serif;
+  width: 100%;
+  height: 46px;
+  background: #2a2a2a;
+  line-height: 46px;
+  overflow: hidden;
+  color: #ddd;
+  box-shadow: 3px 1px 6px #0003;
+  border-bottom: 1px solid #000;
+  font-size: large;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* App.css */
+
+.expression-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.expression-list {
+  margin-bottom: 20px;
+}
+
+.expression-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expression-item span {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* .expression {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+} */
+
+.katex-expression {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #4a5568;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.expression-input-container {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expression-input {
+  padding: 6px 10px;
+  margin-right: 5px;
+  font-size: 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.expression-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 4px rgba(66, 153, 225, 0.6);
+}
+
+.expression-delete {
+  padding: 4px 8px;
+  border: none;
+  background-color: #e53e3e;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.expression-delete:hover {
+  background-color: #c53030;
+}
+
+.missing-variables {
+  margin-top: 10px;
+}
+
+.missing-variables label {
+  margin-right: 5px;
+  color: #2d3748;
+}
+
+.missing-variables-input {
+  width: 50px;
+  padding: 4px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+}
+
+.missing-variables-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 4px rgba(66, 153, 225, 0.6);
+}
+
+.expression-reset {
+  padding: 10px 20px;
+  background-color: #3182ce;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.expression-reset:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.expression-reset:hover:not(:disabled) {
+  background-color: #2b6cb0;
+}
+
+.expression-results {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+}
+
+.result-set {
+  color: #2d3748;
+}
+
+.result-set p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.more-than-two-equations p {
+  color: #d69e2e;
+  font-weight: bold;
 }
