@@ -230,6 +230,7 @@ export default function Expression(){
         ))}
       </div>
 
+      <button className='expression-add' onClick={() => setExpressions({ ...expressions, [getUUID()]: '' })}>Add Expression</button>
       <button className='expression-reset' onClick={resetResults} disabled={isEmpty(resultSet)}>Reset</button>
 
       {!isEmpty(resultSet) && (
